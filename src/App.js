@@ -7,6 +7,8 @@ import * as C from './AppStyled';
 import HomeScreen from './pages/HomeScreen';
 import Tela2Screen from './pages/Tela2Screen';
 import { MenuItem } from './components';
+import { PrivateRoute } from './components/PrivateRoute';
+import { Cart } from './components/Cart';
 
 const App = () => {
     const name = useSelector(state => state.user.name);
@@ -26,14 +28,22 @@ const App = () => {
                         <Route exact path="/">
                             <HomeScreen />
                         </Route>
+
+                        <PrivateRoute exact path="/orders">
+                            <div>Tela de pedidos</div>
+                        </PrivateRoute>
+
+                        <PrivateRoute exact path="/profile">
+                            <div>Tela de perfil</div>
+                        </PrivateRoute>
+
                         <Route path="/tela2/:nome">
                             <Tela2Screen />
                         </Route>
                     </Switch>
                 </C.PageBody>
+                <Cart />
             </C.Container>
-            <h1>Oi, {name}</h1>
-
         </BrowserRouter>
     );
 }
