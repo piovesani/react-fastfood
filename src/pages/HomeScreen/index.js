@@ -1,18 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
-import { Container, Titulo } from './styled';
+import * as C from './styled';
+import { Header } from '../../components/Header';
 
-export default () => {
+export const HomeScreen = () => {
     const history = useHistory();
+    const [headerSearch, setHeaderSearch] = useState('');
 
-    const handleButtonClick = () => {
-        history.push('/tela2/testador');
-    }
-
+    
     return (
-        <Container>
-            <Titulo>Homepage</Titulo>
-            <button onClick={handleButtonClick}>Ir para Tela 2</button>
-        </Container>
+        <C.Container>
+            <Header search={headerSearch} onSearch={setHeaderSearch}/>
+        </C.Container>
     );
 }

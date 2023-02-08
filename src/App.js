@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 import * as C from './AppStyled';
 
-import HomeScreen from './pages/HomeScreen';
+import { HomeScreen } from './pages/HomeScreen';
 import Tela2Screen from './pages/Tela2Screen';
 import { MenuItem } from './components';
 import { PrivateRoute } from './components/PrivateRoute';
