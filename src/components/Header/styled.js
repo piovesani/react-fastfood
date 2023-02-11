@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    background-color: #000000;
+    background-color: #201C2E;
     border-radius: 8px;
     padding: 20px;
     display: flex;

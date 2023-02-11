@@ -8,7 +8,7 @@ export const LinkArea = styled.a`
     height: 60px;
     border-radius: 8px;
     margin-bottom: 10px;
-    background-color: ${props=>props.active ? '#2e211e' : 'transparent'};;
+    background-color: ${props=>props.active ? '#2e211e' : 'transparent'};
     transition: all easy .2s;
 
     &:hover{
