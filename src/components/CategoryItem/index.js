@@ -1,7 +1,7 @@
 import React from "react";
 import {Container, CategoryImage } from "./styled";
 
-export const CategoryItem = ({ data, activeCategory, setActiveCategory }) => {
+export const CategoryItem = ({ data, activeCategory, setActiveCategory, label }) => {
     console.log(activeCategory + ' ' + data.id);
 
     let color = activeCategory === data.id ? '#201C2E' : '#2E211E';
@@ -11,7 +11,7 @@ export const CategoryItem = ({ data, activeCategory, setActiveCategory }) => {
     }
 
     return(
-        <Container color={color} onClick={handleCategoryClick}>
+        <Container color={color} onClick={handleCategoryClick} aria-label={data.name}>
             <CategoryImage src={data.image} />
         </Container>
     );

@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory, useLocation} from 'react-router-dom';
 import * as C from './styles';
 
-export const MenuItem = ({link, icon}) => {
+export const MenuItem = ({link, icon, label}) => {
 
     const history = useHistory();
     const location = useLocation();
@@ -15,7 +15,9 @@ export const MenuItem = ({link, icon}) => {
 
     }
     return(
-        <C.LinkArea active={isActive} href={link} onClick={handleLinkClick}>
+        <C.LinkArea active={isActive}
+         href={link} onClick={handleLinkClick}
+         aria-label={label}>
             <C.LinkIcon src={icon}/>
         </C.LinkArea>
     );

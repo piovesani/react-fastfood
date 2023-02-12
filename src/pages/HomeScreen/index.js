@@ -36,7 +36,7 @@ export const HomeScreen = () => {
                     <C.CategoryList>
                         <CategoryItem data={{
                             id:0,
-                            title: 'Todas Categorias',
+                            name: 'Todas Categorias',
                             image: '/assets/food-and-restaurant.png'
                         }}
                         activeCategory={activeCategory}
